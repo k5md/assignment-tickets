@@ -3,17 +3,21 @@
   "version": "0.0.1",
   "description": "Test assignment for Bell Integrator",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "webpack-dev-server --config ./webpack.dev.js"
   },
   "author": "k5md",
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -22,14 +26,17 @@
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.6",
     "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-react": "^7.13.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.7.0",
+    "redux-logger": "^3.0.6",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.4.1",
