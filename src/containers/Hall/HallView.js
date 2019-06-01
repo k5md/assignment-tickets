@@ -15,6 +15,7 @@ class HallView extends React.Component {
 
   render() {
     const { hall, archieved, selectedSeats } = this.props;
+
     return (
       <React.Fragment>
         {hall.map((rowSeats, rowIndex) =>

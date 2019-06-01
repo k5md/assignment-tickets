@@ -7,9 +7,10 @@ const HallContainer = props => (<HallView {...props} />);
 
 function mapStateToProps(state) {
   const { selectedDate, selectedTime, selectedSeats, ticketHistory } = state.bookTicketsReducer;
+
   return {
     hall: ticketHistory[selectedDate][selectedTime],
-    archieved: new Date(...selectedDate.split('.'), ...selectedTime.split(':')) <= new Date(),
+    archieved: new Date(...selectedDate.split('/'), ...selectedTime.split(':')) <= new Date(),
     selectedSeats,
   };
 }

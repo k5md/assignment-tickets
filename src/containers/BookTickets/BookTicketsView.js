@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Hall from '../Hall';
 import SelectInput from '../../components/SelectInput';
+import { getDisplayedDate, getRealDate } from '../../utils/dates';
 
 class BookTicketsView extends Component {
   handleDateChange = (e) => {
     const { selectDate } = this.props;
-    selectDate(e.currentTarget.value);
+    // options values represent human-readable dates, with months counted from 0
+    // convert it to 'real' dates before saving
+    const displayedDate = e.currentTarget.value;
+    const realDate = getRealDate(displayedDate);
+    selectDate(realDate);
   }
 
   handleTimeChange = (e) => {
@@ -26,7 +31,9 @@ class BookTicketsView extends Component {
       ticketHistory,
     } = this.props;
 
-    const dates = Object.keys(ticketHistory);
+    // months in selectedDate start from 0
+    const displayedDate = getDisplayedDate(selectedDate);
+    const dates = Object.keys(ticketHistory).map(getDisplayedDate);
     const sessions = Object.keys(ticketHistory[selectedDate]);
 
     return (
@@ -37,7 +44,7 @@ class BookTicketsView extends Component {
               <div className="row mb-5 justify-content-center">
                 <div className="col-md-6">
                   <SelectInput
-                    value={selectedDate}
+                    value={displayedDate}
                     label="Выберите дату:"
                     onChange={e => this.handleDateChange(e)}
                     selectables={dates}

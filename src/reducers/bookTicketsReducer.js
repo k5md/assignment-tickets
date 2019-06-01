@@ -5,7 +5,7 @@ import { generateDataEntry, generateDataset, hoursRange } from '../utils/dataset
 const dataset = generateDataset();
 
 const now = new Date();
-const selectedDate = [ now.getFullYear(), now.getMonth() + 1, now.getDate() ].join('/'); // months start from 0
+const selectedDate = [ now.getFullYear(), now.getMonth(), now.getDate() ].join('/'); // months start from 0
 const selectedTime = hoursRange[0];
 const initialState = {
   selectedDate,
