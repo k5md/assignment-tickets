@@ -14,7 +14,7 @@ const maxDaysOffset = 7;
 
 const now = new Date();
 
-export const daysRange = generateDaysRange(now, minDaysOffset, maxDaysOffset); // list of 'YYYY.MM.DD'
+export const daysRange = generateDaysRange(now, minDaysOffset, maxDaysOffset); // list of 'YYYY/MM/DD'
 export const hoursRange = generateHoursRange(startHour, endHour, durationHours); // list of 'HH:MM'
 
 const generateHallData = () => {

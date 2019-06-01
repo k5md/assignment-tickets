@@ -13,5 +13,5 @@ export const generateDaysRange = (base, minOffset, maxOffset) => _
     base.getDate() + offset,
   ))
   .map(date => [ date.getFullYear(), date.getMonth(), date.getDate() ] // months start from 0
-  .join('.') // YYYY.MM.DD
+  .join('/') // YYYY/MM/DD
 );
