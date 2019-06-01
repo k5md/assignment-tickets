@@ -1,7 +1,7 @@
-import homeReducer from './homeReducer';
+import bookTicketsReducer from './bookTicketsReducer';
 
 const reducers = Object.assign({
-  homeReducer,
+  bookTicketsReducer,
 });
 
 export default reducers;

@@ -1,0 +1,23 @@
+.seat {
+  height: 75px;
+  width: 75px;
+  flex-grow: 0;
+  margin: 5px;
+  cursor: default;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat-booked {
+  background-color: #5cb85c;
+}
+
+.seat-taken {
+  background-color: #f0ad4e;
+}
+
+.seat-selected {
+  background-color: #5bc0de;
+}

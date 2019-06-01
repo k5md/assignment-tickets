@@ -14,7 +14,7 @@ const config = {
 
 const middleware = [];
 const reducers = persistCombineReducers(config, rootReducers);
-const enhancers = [applyMiddleware(...middleware)];
+const enhancers = [ applyMiddleware(...middleware) ];
 
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers =
