@@ -39,7 +39,7 @@ export const generateDataEntry = () => hoursRange.reduce(
   (acc, hour) => ({ ...acc, [hour]: generateHallData() }), {}
 );
 
-// generates an object with datestrings (DD.MM.YYYY) as keys, dataEntries as values
+// generates an object with datestrings (DD/MM/YYYY) as keys, dataEntries as values
 export const generateDataset = () => daysRange.reduce(
   (acc, day) => ({ ...acc, [day]: generateDataEntry() }), {}
 );
